@@ -17,7 +17,7 @@ curl \
 curl \
   -H "Accept: application/vnd.api+json" \
   -H "Authorization: Token token={TOKEN}" \
-  https://api.codeclimate.com/repos/696a76232df2736347000001
+  https://api.codeclimate.com/v1/repos/696a76232df2736347000001
 ```
 
 > JSON response:
