@@ -17,7 +17,7 @@ curl \
 curl \
   -H "Accept: application/vnd.api+json" \
   -H "Authorization: Token token={TOKEN}" \
-  https://api.codeclimate.com/repos/696a76232df2736347000001
+  https://api.codeclimate.com/v1/repos/696a76232df2736347000001
 ```
 
 > JSON response:
@@ -75,11 +75,11 @@ Retrieves information about the specified repository.
 
 ### HTTP Request
 
-`GET http://api.codeclimate.com/repos?github_slug={github_slug}`
+`GET http://api.codeclimate.com/v1/repos?github_slug={github_slug}`
 
 _OR_
 
-`GET http://api.codeclimate.com/repos/:repo_id`
+`GET http://api.codeclimate.com/v1/repos/:repo_id`
 
 ### Query Parameters
 
