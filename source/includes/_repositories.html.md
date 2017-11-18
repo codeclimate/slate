@@ -89,7 +89,7 @@ _OR_
 
 ## Get ref points
 
-> First page of ref points, for master bramnch only, which have completed Code Climate analysis.
+> First page of ref points, for master branch only, which have completed Code Climate analysis.
 
 ```shell
 curl \
