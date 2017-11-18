@@ -21,7 +21,7 @@ curl \
       "enabled_features": [
         "builder_pull_engines",
         "disable_transactions",
-        "encrypted_ssh_private_keys",
+        "encrypted_ssh_private_keys"
       ],
       "full_name": "Dale Cooper",
       "staff": false
