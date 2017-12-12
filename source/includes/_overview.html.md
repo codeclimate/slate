@@ -18,10 +18,6 @@ Following this, here are the base URLs (assuming current version):
 
 **On premise:** `https://{YOUR-CC-HOST-NAME}/api/v1`
 
-<aside class="notice">
-The Code Climate API is currently in Beta. Some endpoints and responses may change without warning.
-</aside>
-
 ## Authentication
 
 > All authenticated calls must include a Authorization header including a valid token.
