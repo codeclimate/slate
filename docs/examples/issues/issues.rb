@@ -12,9 +12,8 @@
 #
 # # Installation:
 #
-# 1. Install dependencies
+# 1. Install script's dependencies
 #
-# This script uses two dependencies which can be installed with bundler:
 # $ bundle install
 #
 # 2. Create .env file
