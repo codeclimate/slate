@@ -4,8 +4,8 @@
 
 ```shell
 curl \
-  -H "Accept: application/vnd.api+json"
-  -H "Authorization: Token token={TOKEN}"
+  -H "Accept: application/vnd.api+json" \
+  -H "Authorization: Token token={TOKEN}" \
   --get \
   --data-urlencode "filter[path]=lib/book.rb" \
   https://api.codeclimate.com/v1/repos/696a76232df2736347000001/pulls/65/files
@@ -44,3 +44,25 @@ Filters include:
 | Name | Description | Required? |
 | ---- | ----------- | --------- |
 | filter[path] | Complete file path for file to filter by | Yes |
+
+## Approve PRs
+
+```shell
+curl \
+  -H "Accept: application/vnd.api+json" \
+  -H "Authorization: Token token={TOKEN}" \
+  --data-urlencode "reason=Just because." \
+  https://api.codeclimate.com/v1/repos/696a76232df2736347000001/pulls/65/approve
+```
+
+Approves a given pull request.
+
+### HTTP Request
+
+`POST https://api.codeclimate.com/v1/repos/:repo_id/pulls/:number/approve`
+
+### Post Parameters
+
+| Parameter | Description | Required? |
+| --------- | ----------- | --------- |
+| reason    | Reason pull request is being approved. | No |
