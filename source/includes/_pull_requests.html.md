@@ -51,8 +51,43 @@ Filters include:
 curl \
   -H "Accept: application/vnd.api+json" \
   -H "Authorization: Token token={TOKEN}" \
-  --data-urlencode "reason=Just because." \
+  --data-urlencode "data[attributes][reason]=merge" \
   https://api.codeclimate.com/v1/repos/696a76232df2736347000001/pulls/65/approvals
+```
+
+> JSON response:
+
+```json
+{
+  "data": {
+    "id": "5a60de1a4668b4650a000b5a",
+    "type": "approvals",
+    "attributes": {
+      "reason": "merge",
+      "created_at": "2018-01-18T17:49:14.458Z"
+    },
+    "relationships": {
+      "author": {
+        "data": {
+          "id": "516341ca7e00a428b0015372",
+          "type": "users"
+        }
+      },
+      "pull_request": {
+        "data": {
+          "id": "5a60d683af0a490001000a71",
+          "type": "pull_requests"
+        }
+      },
+      "repo": {
+        "data": {
+          "id": "696a76232df2736347000001",
+          "type": "repos"
+        }
+      }
+    }
+  }
+}
 ```
 
 Approves a given pull request.
@@ -60,9 +95,3 @@ Approves a given pull request.
 ### HTTP Request
 
 `POST https://api.codeclimate.com/v1/repos/:repo_id/pulls/:number/approvals`
-
-### Post Parameters
-
-| Parameter | Description | Required? |
-| --------- | ----------- | --------- |
-| reason    | Reason pull request is being approved. | No |
