@@ -52,14 +52,14 @@ curl \
   -H "Accept: application/vnd.api+json" \
   -H "Authorization: Token token={TOKEN}" \
   --data-urlencode "reason=Just because." \
-  https://api.codeclimate.com/v1/repos/696a76232df2736347000001/pulls/65/approve
+  https://api.codeclimate.com/v1/repos/696a76232df2736347000001/pulls/65/approvals
 ```
 
 Approves a given pull request.
 
 ### HTTP Request
 
-`POST https://api.codeclimate.com/v1/repos/:repo_id/pulls/:number/approve`
+`POST https://api.codeclimate.com/v1/repos/:repo_id/pulls/:number/approvals`
 
 ### Post Parameters
 
