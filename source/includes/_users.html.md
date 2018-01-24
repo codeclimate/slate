@@ -37,7 +37,7 @@ Returns information about the authenticated user.
 
 ### HTTP Request
 
-`GET http://api.codeclimate.com/v1/user`
+`GET https://api.codeclimate.com/v1/user`
 
 ### Query Parameters
 

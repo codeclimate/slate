@@ -54,7 +54,7 @@ Returns collection of organizations for the current user.
 
 ### HTTP Request
 
-`GET http://api.codeclimate.com/v1/orgs`
+`GET https://api.codeclimate.com/v1/orgs`
 
 ### Query Parameters
 
@@ -113,7 +113,7 @@ requests.
 
 ### HTTP Request
 
-`POST http://api.codeclimate.com/v1/orgs/:org_id/permissions`
+`POST https://api.codeclimate.com/v1/orgs/:org_id/permissions`
 
 ### Query Parameters
 
@@ -174,7 +174,7 @@ created organization and status `201`.
 
 ### HTTP Request
 
-`POST http://api.codeclimate.com/v1/orgs`
+`POST https://api.codeclimate.com/v1/orgs`
 
 ### POST Parameters
 
@@ -266,7 +266,7 @@ added repository and status `201`.
 
 ### HTTP Request
 
-`POST http://api.codeclimate.com/v1/orgs/:org_id/repos`
+`POST https://api.codeclimate.com/v1/orgs/:org_id/repos`
 
 ### POST Parameters
 

@@ -75,11 +75,11 @@ Retrieves information about the specified repository.
 
 ### HTTP Request
 
-`GET http://api.codeclimate.com/v1/repos?github_slug={github_slug}`
+`GET https://api.codeclimate.com/v1/repos?github_slug={github_slug}`
 
 _OR_
 
-`GET http://api.codeclimate.com/v1/repos/:repo_id`
+`GET https://api.codeclimate.com/v1/repos/:repo_id`
 
 ### Query Parameters
 
@@ -437,7 +437,7 @@ added repository and status `201`.
 
 ### HTTP Request
 
-`POST http://api.codeclimate.com/v1/github/repos`
+`POST https://api.codeclimate.com/v1/github/repos`
 
 ### POST Parameters
 
