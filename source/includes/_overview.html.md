@@ -114,3 +114,22 @@ filters can be of two basic formats (examples on the right):
 2. A more complex data structure with an operator. At this time only the `$in` operator is supported.
 
 See the `Query Parameters` section of each endpoint for details about what filters are supported.
+
+## Fetching associated resources
+
+Code Climate's API supports [loading associated resources|http://jsonapi.org/format/#fetching-includes] in a single API call.
+
+To determine what associated resources can be loaded, inspect the `relationships` section of the API response. For example, the GET repo endpoint returns a JSON response with a `relationships` key, where one of the relationships is named `latest_default_branch_snapshot`.
+
+Fetch the associated resource(s) by using the `include` query string parameter. Multiple included resources should use an `include[]` parameter, with resources specified as a comma-delimited list.
+
+For example:
+
+```shell
+curl \
+  -H "Accept: application/vnd.api+json" \
+  -H "Authorization: Token token={TOKEN}" \
+  --get \
+  --data-urlencode "include[]=latest_default_branch_snapshot,account" \
+  https://api.codeclimate.com/v1/repos/696a76232df2736347000001
+```
