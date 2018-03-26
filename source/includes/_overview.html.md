@@ -117,7 +117,7 @@ See the `Query Parameters` section of each endpoint for details about what filte
 
 ## Fetching associated resources
 
-Code Climate's API supports [loading associated resources|http://jsonapi.org/format/#fetching-includes] in a single API call.
+Code Climate's API supports [loading associated resources](http://jsonapi.org/format/#fetching-includes) in a single API call.
 
 To determine what associated resources can be loaded, inspect the `relationships` section of the API response. For example, the GET repo endpoint returns a JSON response with a `relationships` key, where one of the relationships is named `latest_default_branch_snapshot`.
 
