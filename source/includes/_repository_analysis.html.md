@@ -153,6 +153,7 @@ Filters include:
 
 | Name | Description | Required? |
 | ---- | ----------- | --------- |
+| filter[categories] | Single path or `$in` clause containing list of categories | No |
 | filter[severity] | Single severity or `$in` clause containing list of severities | No |
 | filter[status] | Single status or `$in` clause containing list of statuses | No |
 | filter[location.path] | Single path or `$in` clause containing list of statuses | No |
