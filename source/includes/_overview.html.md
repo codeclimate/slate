@@ -96,8 +96,8 @@ curl \
   -H "Accept: application/vnd.api+json" \
   -H "Authorization: Token token={TOKEN}" \
   --get \
-  --data-urlencode "filter[branch][$in][]=master" \
-  --data-urlencode "filter[branch][$in][]=development" \
+  --data-urlencode "filter[branch][\$in][]=master" \
+  --data-urlencode "filter[branch][\$in][]=development" \
   https://api.codeclimate.com/v1/repos/696a76232df2736347000001/ref_points
 ```
 
