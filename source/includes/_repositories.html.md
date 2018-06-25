@@ -449,3 +449,93 @@ For more details, consult [Creating Resources](http://jsonapi.org/format/#crud-c
 | Parameter | Description | Required? |
 | --------- | ----------- | --------- |
 | url       | Code Climate uses the `url` parameter to determine where your repository is hosted and how to clone it. Currently, only repositories hosted on GitHub are supported, so we only accept `https://github.com` URLs. Once created, users will still find a Deploy Key added on GitHub and an SSH-based clone URL in their repo settings. | Yes |
+
+## Update private repository
+
+```shell
+# note: to remove a delegated configuration repository,
+# pass the setting without a value
+# --data "data[attributes][delegated_config_repo_id]"
+
+curl \
+  -H "Accept: application/vnd.api+json"
+  -H "Authorization: Token token={TOKEN}"
+  -X PUT \
+  --data "data[attributes][delegated_config_repo_id]=5b3115402954870021000001"
+  https://api.codeclimate.com/v1/orgs/5a81d1bbbb0c5d026b000001/repos/696a76232df2736347000001
+```
+
+> JSON response:
+
+```json
+{
+  "data": {
+    "id": "696a76232df2736347000001",
+    "type": "repos",
+    "attributes": {
+      "analysis_version": 3385,
+      "badge_token": "16096d266f46b7c68dd4",
+      "branch": "master",
+      "created_at": "2017-07-15T20:08:03.732Z",
+      "delegated_config_repo_id": "5b3115402954870021000001",
+      "github_slug": "twinpeaks\/ranchorosa",
+      "human_name": "ranchorosa",
+      "last_activity_at": "2017-07-15T20:09:41.846Z",
+      "score": 1.36
+    },
+    "relationships": {
+      "latest_default_branch_snapshot": {
+        "data": {
+          "id": "596a762c9373ca000100177e",
+          "type": "snapshots"
+        }
+      },
+      "latest_default_branch_test_report": {
+        "data": null
+      },
+      "account": {
+        "data": {
+          "id": "5a81d1bbbb0c5d026b000001",
+          "type": "orgs"
+        }
+      }
+    },
+    "links": {
+      "self": "https:\/\/codeclimate.com\/repos\/696a76232df2736347000001",
+      "services": "https:\/\/api.codeclimate.com\/v1\/repos\/696a76232df2736347000001\/services",
+      "web_coverage": "https:\/\/codeclimate.com\/repos\/696a76232df2736347000001\/coverage",
+      "web_issues": "https:\/\/codeclimate.com\/repos\/696a76232df2736347000001\/issues"
+    },
+    "meta": {
+      "permissions": {
+        "admin": true
+      }
+    }
+  }
+}
+```
+
+Update a private repository on Code Climate
+
+Currently this endpoint can only be used to configure delegated analysis for
+private repositories.
+
+If the repository is updated successfully, this endpoint responds with the
+updated repository and status `200`.
+
+### HTTP Request
+
+`PUT https://api.codeclimate.com/v1/orgs/:org_id/repos/:repo_id`
+
+### PUT Parameters
+
+Request is a JSON API document which complies with the specification for
+resource update requests. See example PUT in gutter for format.
+
+For more details, consult [Updating Resources](http://jsonapi.org/format/#crud-updating).
+
+Permitted update parameters:
+
+| Parameter | Description | Required? |
+| --------- | ----------- | --------- |
+| delegated_config_repo_id | The `repo_id` of another repository within the organization to be used as the configuration repository | No |
