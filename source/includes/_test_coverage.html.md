@@ -20,6 +20,7 @@ curl
       "id": "596ad7629c5b3756bc000003",
       "type": "test_reports",
       "attributes": {
+        "branch": "master",
         "commit_sha": "cd3811626d5f723130417735d10a132f285795cc",
         "committed_at": "2017-07-16T02:55:52.000Z",
         "covered_percent": 84.946657957762,
@@ -32,6 +33,7 @@ curl
           },
           "pillar": "Test Coverage"
         },
+        "received_at": "2018-09-06T20:25:28.098Z",
         "state": "done"
       }
     },
@@ -39,6 +41,7 @@ curl
       "id": "596ad4e7e13a1a079100000f",
       "type": "test_reports",
       "attributes": {
+        "branch": "master",
         "commit_sha": "a06a461bd0659d733073024434c952445fa4ba77",
         "committed_at": "2017-07-16T02:36:27.000Z",
         "covered_percent": 84.946657957762,
@@ -51,6 +54,7 @@ curl
           },
           "pillar": "Test Coverage"
         },
+        "received_at": "2018-09-05T20:25:28.098Z",
         "state": "done"
       }
     },
@@ -58,6 +62,7 @@ curl
       "id": "5969249a7834e60266000001",
       "type": "test_reports",
       "attributes": {
+        "branch": "master",
         "commit_sha": "db36165a645abbb5ac78d3c70dffffa4aef7d832",
         "committed_at": "2017-07-14T20:00:24.000Z",
         "covered_percent": 84.9460024386,
@@ -70,6 +75,7 @@ curl
           },
           "pillar": "Test Coverage"
         },
+        "received_at": "2018-09-04T20:25:28.098Z",
         "state": "done"
       }
     }
