@@ -36,6 +36,8 @@ curl \
         "github_slug": "twinpeaks\/ranchorosa",
         "human_name": "ranchorosa",
         "last_activity_at": "2017-07-15T20:09:41.846Z",
+        "vcs_database_id": "92872343",
+        "vcs_host": "https://github.com",
         "score": 1.36
       },
       "relationships": {
@@ -402,6 +404,8 @@ $ curl \
       "github_slug": "twinpeaks\/ranchorosa",
       "human_name": "brew",
       "last_activity_at": "2017-07-25T21:05:34.827Z",
+      "vcs_database_id": "92872343",
+      "vcs_host": "https://github.com",
       "score": null
     },
     "relationships": {
@@ -481,6 +485,8 @@ curl \
       "github_slug": "twinpeaks\/ranchorosa",
       "human_name": "ranchorosa",
       "last_activity_at": "2017-07-15T20:09:41.846Z",
+      "vcs_database_id": "92872343",
+      "vcs_host": "https://github.com",
       "score": 1.36
     },
     "relationships": {
