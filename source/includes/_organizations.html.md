@@ -128,7 +128,10 @@ N/A
   "data": {
     "type": "orgs",
     "attributes": {
-      "name": "Twin Peaks"
+      "name": "Twin Peaks",
+      "vcs_owner_attributes": {
+        "vcs_login": "your-github-org-name"
+      }
     }
   }
 }
