@@ -189,6 +189,8 @@ For more details, consult [Creating Resources](http://jsonapi.org/format/#crud-c
 | Parameter | Description | Required? |
 | --------- | ----------- | --------- |
 | name      | Name of the new organization | Yes |
+| vcs_owner_attributes | Hash containing attributes to connect the organization to a version control system's organization (e.g. your GitHub organization) for authentication | No |
+| vcs_owner_attributes.vcs_login | The name of your GitHub organization to connect to the Code Climate organization | No +
 
 ## Add private repository
 
