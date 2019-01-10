@@ -100,7 +100,13 @@ by line coverage is available via the test file reports endpoint.
 
 ### Query Parameters
 
-[Paginated](#collection-pagination)
+[Paginated](#collection-pagination), [Filterable](#collection-filtering)
+
+Filters include:
+
+| Name | Description | Required? |
+| ---- | ----------- | --------- |
+| filter[branch] | Test reports associated with the specified `branch` | No |
 
 ## Get test coverage file reports
 
