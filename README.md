@@ -1,3 +1,6 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/78cef65a-aef9-4d95-b664-b9d850ec04d2/deploy-status)](https://app.netlify.com/sites/cc-api-docs/deploys)
+
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/lord/img/master/logo-slate.png" alt="Slate: API Documentation Generator" width="226">
   <br>
