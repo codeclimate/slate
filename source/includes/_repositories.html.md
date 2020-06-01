@@ -545,3 +545,21 @@ Permitted update parameters:
 | Parameter | Description | Required? |
 | --------- | ----------- | --------- |
 | delegated_config_repo_id | The `repo_id` of another repository within the organization to be used as the configuration repository | No |
+
+## Delete private repository
+
+```shell
+curl \
+  -H "Accept: application/vnd.api+json"
+  -H "Authorization: Token token={TOKEN}"
+  -X DELETE \
+  https://api.codeclimate.com/v1/repos/696a76232df2736347000001
+```
+
+Delete a private repository on Code Climate
+
+If the repository is deleted successfully, this endpoint responds with status `204`.
+
+### HTTP Request
+
+`DELTE https://api.codeclimate.com/v1/repos/:repo_id`
