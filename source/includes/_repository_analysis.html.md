@@ -476,7 +476,7 @@ N/A
 
 ## Get time series
 
-> Retrieves the number of files rated with an `A` each week between `2017-04-01` and `2017-05-01`.
+> Retrieves the diff coverage for each week between `2017-04-01` and `2017-05-01`.
 
 ```shell
 curl \
@@ -485,7 +485,7 @@ curl \
   --get
   --data-urlencode "filter[from]=2017-04-01"
   --data-urlencode "filter[to]=2017-05-01"
-  https://api.codeclimate.com/v1/repos/696a76232df2736347000001/metrics/ratings.A
+  https://api.codeclimate.com/v1/repos/696a76232df2736347000001/metrics/diff_coverage
 ```
 
 > JSON response. `points` is an array of data points each containing a `timestamp` and `value`.
@@ -496,31 +496,31 @@ curl \
     "id": "58b05f886d9cd4bb01000123",
     "type": "metrics",
     "attributes": {
-      "name": "ratings.A",
+      "name": "diff_coverage",
       "points": [
         {
           "timestamp": 1490572800,
-          "value": 1398
+          "value": 100.0
         },
         {
           "timestamp": 1491177600,
-          "value": 1387
+          "value": 97.08
         },
         {
           "timestamp": 1491782400,
-          "value": 1389
+          "value": 99.0
         },
         {
           "timestamp": 1492387200,
-          "value": 1389
+          "value": 100.0
         },
         {
           "timestamp": 1492992000,
-          "value": 1389
+          "value": 100.0
         },
         {
           "timestamp": 1493596800,
-          "value": 1392
+          "value": 100.0
         }
       ]
     }
@@ -549,12 +549,11 @@ timestamp format used elsewhere in the API.
 
 | Metric | Description |
 | ------ | ----------- |
-| gpa    | Grade point average of repository |
-| ratings.A | Number of files with an `A` rating |
-| ratings.B | Number of files with a `B` rating |
-| ratings.C | Number of files with a `C` rating |
-| ratings.D | Number of files with a `D` rating |
-| ratings.F | Number of files with an `F` rating |
+| loc.[Language]    | Lines of code for Language. Ex.: loc.JavaScript |
+| diff_coverage | Diff coverage for that data point |
+| remediation_minutes | Calculated minutes to fix issues for that data point |
+| technical_debt_ratio | Technical debt ratio for that data point |
+| test_coverage | Test coverage percentage for that data point |
 
 ### Query Parameters
 
