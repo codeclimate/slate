@@ -180,7 +180,7 @@ curl \
       "attributes": {
         "blob_id": "c101538850228bcb9a91916ce1ce33fe34a75658",
         "path": "lib/book.rb",
-        "rating": null
+        "rating": []
       }
     },
     {
@@ -189,7 +189,26 @@ curl \
       "attributes": {
         "blob_id": "19e1f6c863dca39b1724b0007fbc8b3564411a14",
         "path": "lib/group.rb",
-        "rating": null
+        "rating": [
+          {
+            "path": "lib/group.rb",
+            "letter": "A",
+            "measure": {
+                "value": 0,
+                "unit": "minute"
+            },
+            "pillar": "Maintainability"
+          },
+          {
+            "letter": "A",
+            "measure": {
+              "unit": "percent",
+              "value": 95.0,
+            },
+            "path": "lib/group.rb",
+            "pillar": "Test Coverage",
+          }
+        ]
       }
     },
     {
@@ -198,7 +217,26 @@ curl \
       "attributes": {
         "blob_id": "e1166417d88ba5dad15a47564146a68ac3c50222",
         "path": "lib/user.rb",
-        "rating": null
+        "rating": [
+          {
+            "path": "lib/user.rb",
+            "letter": "B",
+            "measure": {
+                "value": 400,
+                "unit": "minute"
+            },
+            "pillar": "Maintainability"
+          },
+          {
+            "letter": "B",
+            "measure": {
+              "unit": "percent",
+              "value": 80.0,
+            },
+            "path": "lib/user.rb",
+            "pillar": "Test Coverage",
+          }
+        ]
       }
     }
   ],
