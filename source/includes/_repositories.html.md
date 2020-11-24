@@ -36,6 +36,8 @@ curl \
         "github_slug": "twinpeaks\/ranchorosa",
         "human_name": "ranchorosa",
         "last_activity_at": "2017-07-15T20:09:41.846Z",
+        "test_reporter_id": "d8ffac8b9a787b957e70ca74b8cac2dff09ed537b8c6023ac0424c8a43381402",
+        "total_coverage_enforced": true,
         "vcs_database_id": "92872343",
         "vcs_host": "https://github.com",
         "score": 1.36
