@@ -119,6 +119,61 @@ requests.
 
 N/A
 
+## Get members
+
+```shell
+curl \
+  -H "Accept: application/vnd.api+json" \
+  -H "Authorization: Token token={TOKEN}" \
+  https://api.codeclimate.com/v1/orgs/596b70adb79d8f147b000002/members
+```
+
+> JSON response
+
+```json
+{
+  "data":[
+    {
+      "id": "602c2cfee9c14500fc000001",
+      "type": "users",
+      "attributes": {
+        "email": "lewis.oliver@example.com",
+        "full_name": "Lewis Oliver",
+        "staff": true
+      },
+      "links": {
+        "avatar": "https://avatars.githubusercontent.com/u/11605222"
+      }
+    },
+    {
+      "id": "602c2d13e9c14500fc000002",
+      "type": "users",
+      "attributes": {
+        "email": "bob.mendoza@example.com",
+        "full_name": "Bob Mendoza",
+        "staff": false
+      },
+      "links": {
+        "avatar": "https://avatars.githubusercontent.com/u/62915929"
+      }
+    }
+  ]
+}
+```
+
+Returns listing of active members for the specified organization that the authenticated
+user (user associated with the passed token) has access to.
+
+### HTTP Request
+
+`GET https://api.codeclimate.com/v1/orgs/:org_id/members`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+admin_only | false | If set to true, the result will only include administrator members.
+
 ## Create organization
 
 > Given a JSON file "create-org.json" with the following contents ...
